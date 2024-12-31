@@ -7,5 +7,23 @@
 		<!--<meta http-equiv="refresh" content="0; URL=https://yoelkastro.github.io/cv-host/cv.pdf" /> -->
 	</head>
 	<body>
+		<script>
+			function iOS() {
+			  return [
+			    'iPad Simulator',
+			    'iPhone Simulator',
+			    'iPod Simulator',
+			    'iPad',
+			    'iPhone',
+			    'iPod'
+			  ].includes(navigator.platform)
+			  // iPad on iOS 13 detection
+			  || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+			}
+
+			if(iOS()){
+				window.location.replace("https://yoelkastro.github.io/cv-host/cv.pdf");
+			}
+		</script>
 	</body>
 </html>
